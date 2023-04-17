@@ -1,2 +1,2 @@
-# UTN-Ejer
+# UTN-Ejercicios
 ejercicios de cursada 
