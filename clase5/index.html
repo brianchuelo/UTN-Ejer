@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--1. Crea un array que contenga el nombre de cinco colores escritos como strings.-->
+
+    <script>
+        const colores = ["rojo", "verde", "azul", "amarillo", "rosa"];
+    </script>
+    
+    <!--2.Guarda en una variable el tercer elemento del array del ejercicio anterior.-->
+
+    <script>
+        const tercerColor = colores[2];
+    </script>
+
+    <!--3.Accede desde un console.log() a la posición 0 del string de la posición 0 del array delejercicio 1.-->
+    
+    <script>
+        console.log(colores[0][0]);
+    </script>
+
+    <!--4. Se pide realizar un script que genere un número aleatorio entre 1 y 99. Investigue la función Math.random().-->
+
+    <script>
+        const numeroAleatorio = Math.floor(Math.random() * 99) + 1;
+        console.log(numeroAleatorio);
+
+    </script>
+    
+    <!--5. Rellena un array con los números del 1 al 10. Muéstralo por la consola.-->
+
+    <script>
+        const numeroos = [];
+        for (let i = 1; i <= 10; i++) {
+          numeroos.push(i);
+        }
+        console.log(numeroos);
+    </script>
+
+
+    <!--6. Rellena un array con números aleatorios (10 por ejemplo). Muéstralo por la consola.-->
+    <script>
+        const numeross = [];
+        for (let i = 0; i < 10; i++) {
+        numeross.push(Math.floor(Math.random() * 100));
+        }
+        console.log(numeross);
+    </script>
+
+    <!--7. Del array anterior, créale una copia (que no sea el mismo en sí). Mostrarlos por la consola.-->
+
+    <script>
+        // Crear el array original
+        const numeros = [];
+        for (let i = 0; i < 10; i++) {
+        numeros.push(Math.floor(Math.random() * 100));
+        }
+
+        // Crear una copia del array utilizando el operador spread
+        const copiaNumeros = [...numeros];
+
+        // Imprimir ambos arrays en la consola
+        console.log("Array original:", numeros);
+        console.log("Copia del array:", copiaNumeros);
+    </script>
+
+    <!--8. Realiza un script que pida cadenas de texto hasta que se ingrese la palabra “cancelar”.
+    Al salir con “cancelar” deben mostrarse todas las cadenas concatenadas con un guión
+    medio. Realizar la misma actividad, pero ahora almacenando los valores en un array y
+    luego recorriendolo para mostrar el resultado deseado del ejercicio-->
+
+    <script>
+        let cadena = "";
+        let cadenas = [];
+
+        while (cadena !== "cancelar") {
+        cadena = prompt("Introduce una cadena de texto (escribe 'cancelar' para salir)");
+        if (cadena !== "cancelar") {
+            cadenas.push(cadena);
+        }
+        }
+
+        console.log(cadenas.join("-"));
+    </script>
+
+    <!--Hacer un formulario con dos campos (pesos y dólares) que al presionar un botón
+        convierte de dólares a pesos. Supondremos que un dólar son trescientos pesos.
+        Mostrar el resultado elemento de html.
+        -->
+
+    <form>
+        <label>
+          Dólares:<input type="number" id="dolares">
+        </label>
+        <br>
+        <label>
+          Pesos:<input type="number" id="pesos" disabled>
+        </label>
+        <br>
+        <button type="button" id="convertir">Convertir</button>
+    </form>
+    <div id="resultado"></div>
+      <script>
+        const dolaresInput = document.getElementById("dolares");
+        const pesosInput = document.getElementById("pesos");
+        const convertirBtn = document.getElementById("convertir");
+        const resultadoDiv = document.getElementById("resultado");
+  
+        convertirBtn.addEventListener("click", function() {
+          const dolares = parseFloat(dolaresInput.value);
+          const pesos = dolares * 300;
+          pesosInput.value = pesos.toFixed(2);
+          resultadoDiv.innerText = `${dolares} dólares son ${pesos} pesos`;
+        });
+      </script>
+      
+      
+      <!--10. Generar la inversa del ejercicio anterior (de pesos a dólares).-->
+
+      <form>
+        <label>
+          Pesos:
+          <input type="number" id="pesoss">
+        </label>
+        <br>
+        <label>
+          Dólares:
+          <input type="number" id="dolaress" disabled>
+        </label>
+        <br>
+        <button type="button" id="convertirr">Convertir</button>
+      </form>
+      <div id="resultadoo"></div>
+      <script>
+        const pesossInput = document.getElementById("pesoss");
+        const dolaressInput = document.getElementById("dolaress");
+        const convertirrBtn = document.getElementById("convertirr");
+        const resultadooDiv = document.getElementById("resultadoo");
+  
+        convertirrBtn.addEventListener("click", function() {
+          const pesos = parseFloat(pesossInput.value);
+          const dolares = pesos / 300;
+          dolaressInput.value = dolares.toFixed(2);
+          resultadooDiv.innerText = `${pesos} pesos son ${dolares} dólares`;
+        });
+      </script>
+
+
+      <!--11. Hacer un formulario que convierta de grados centígrados a grados Fahrenheit. Para
+        ello deberá multiplicar por 9/5 y sumar 32. Tener en cuenta que 30 grados centígrados
+        son 86 grados fahrenheit.-->
+
+        <form>
+            <label>
+              Grados centígrados:
+              <input type="number" id="centigrados">
+            </label>
+            <br>
+            <label>
+              Grados Fahrenheit:
+              <input type="number" id="fahrenheit" disabled>
+            </label>
+            <br>
+            <button type="button" id="convertirrr">Convertir</button>
+          </form>
+          <div id="resultadooo"></div>
+          <script>
+            const centigradosInput = document.getElementById("centigrados");
+            const fahrenheitInput = document.getElementById("fahrenheit");
+            const convertirrrBtn = document.getElementById("convertirrr");
+            const resultadoooDiv = document.getElementById("resultadooo");
+      
+            convertirrrBtn.addEventListener("click", function() {
+              const centigrados = parseFloat(centigradosInput.value);
+              const fahrenheit = (centigrados * (9/5)) + 32;
+              fahrenheitInput.value = fahrenheit.toFixed(2);
+              resultadoooDiv.innerText = `${centigrados} grados centígrados son ${fahrenheit} grados Fahrenheit`;
+            });
+          </script>
+
+          <!--12. Hacer un formulario para solicitar el envío de una caja de cartón. En el formulario
+          podremos especificar las características de la caja. Ejemplo:-->
+
+          <form>
+            <label>
+              Largo de la caja (cm):<input type="number" id="largo" required>
+            </label>
+            <br>
+            <label>
+              Ancho de la caja (cm):<input type="number" id="ancho" required>
+            </label>
+            <br>
+            <label>
+              Altura de la caja (cm):<input type="number" id="altura" required>
+            </label>
+            <br>
+            <label>
+              Peso de la caja (kg):<input type="number" id="peso" required>
+            </label>
+            <br>
+            <label>
+              Dirección de destino:<textarea id="direccion" required></textarea>
+            </label>
+            <br>
+            <button type="submit">Enviar</button>
+          </form>
+
+          <!--13. A través de un formulario, el usuario debe introducir un número secreto que estará
+          entre 0 y 5.
+          El usuario tendrá tres intentos para acertar el número, si no lo logra, habrá perdido el
+          juego.
+          Debemos indicar en un cuadro de texto si el usuario gana, falla el número o pierde.
+          -->
+          <h1>Juego de adivinanza de número secreto</h1>
+          <form id="formulario">
+            <label>
+              Introduce un número secreto entre 0 y 5:
+              <input type="number" id="numero" min="0" max="5" required>
+            </label>
+            <br>
+            <button type="submit">Intentar adivinar</button>
+          </form>
+          <br>
+          <div id="resultaddo"></div>
+          <script>
+            var numeroSecreto = Math.floor(Math.random() * 6); // Genera un número aleatorio entre 0 y 5
+            var intentos = 3;
+            
+            document.getElementById("formulario").addEventListener("submit", function(event) {
+              event.preventDefault();
+              var numero = parseInt(document.getElementById("numero").value);
+              if (numero === numeroSecreto) {
+                document.getElementById("resultaddo").textContent = "¡Ganaste!";
+              } else {
+                intentos--;
+                if (intentos === 0) {
+                  document.getElementById("resultaddo").textContent = "Perdiste, el número secreto era " + numeroSecreto + ".";
+                } else if (numero < numeroSecreto) {
+                  document.getElementById("resultaddo").textContent = "Fallaste, el número secreto es mayor. Te quedan " + intentos + " intentos.";
+                } else {
+                  document.getElementById("resultaddo").textContent = "Fallaste, el número secreto es menor. Te quedan " + intentos + " intentos.";
+                }
+              }
+              document.getElementById("numero").value = "";
+            });
+          </script>
+
+
+
+
+
+
+
+
+</body>
+</html>
