@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTN</title>
+</head>
+<body>
+
+    <script>
+        /* 1) Generar una función que le ingrese por parámetro algún dato ya sea ingresado por el
+            usuario o declarado anteriormente en su código y mostrar por consola el tipo de dato que es. */
+       
+         var dato="soy un dato";
+
+        function valor(dato){
+           console.log (typeof (dato));
+        }
+
+        valor(dato);
+        
+        /* 2) Dado dos números ingresados por el usuario, se pide realizar una función que
+              devuelve la resta de ambos números. Mostrar el resultado por la consola.*/
+        
+        /*
+         var a = prompt('Ingrese el primer numero','')
+         var b = prompt('ingrese el segundo numero','')
+        
+        function calculo(a,b){
+           let resta = parseInt(a) - parseInt(b);
+           return resta;
+        }
+
+        console.log( calculo(a,b));
+        */
+
+
+        /* 3)   Generar una función que le ingresen por parámetro dos valores distintos en dos
+             variables a y b, luego el valor ingresado en a pasarlo a b y el valor Ingresado en b,
+             Pasarlo a a y mostrarlos*/
+
+        
+        /*var a = 5;
+          var b = 3;
+
+        function cambiar_valor(a,b){
+            let c=a
+            let d=b
+            a=d
+            b=c
+            return [a,b];
+
+        }
+
+        console.log(cambiar_valor(a,b));
+        /*
+
+        /* Generar una función que le ingrese por parámetro el valor del lado de un cuadrado
+            calcular su perímetro, su superficie, e informar los mismos en consola*/
+
+       /* function cuadrado(a,b){
+        
+            var superficie = "la superficie es de " + a * b;
+            var perimetro ="el perimetro es de" + a * 4;
+            return (superficie, perimetro);
+            
+        }   
+
+        var a=5
+        var b = 5
+        console.log(cuadrado(a,b))*/
+
+        /* 5) Generar una función que dada una temperatura en grados fahrenheit los convierta agrados celsius.
+
+        celcius=26
+
+        function grados(a){
+            let convercion = 1.8* a + 32;
+
+            return convercion
+        };
+
+        console.log(grados(celcius))*/
+        /* 6) Realizar una función que calcule el factorial de un número ingresado por el usuario (el
+            número no puede ser mayor de 10, realizar la validación). Mostrar el resultado por la
+            consola*/
+
+          /*  function factorialize(num) {
+               
+                if (num >9) 
+                        return -1;
+                    
+          
+                else if (num == 0) 
+                    return 1;
+            
+                    else {
+                        return (num * factorialize(num - 1));
+                    }
+                }
+                console.log(factorialize(5))*/
+
+
+    </script>
+
+    <script>
+        /* 7) Dado una cadena de caracteres ingresada por el usuario, se pide realizar un script que
+        indique si ese texto es un palíndromo. Ejemplo de palíndromo: “Somos o no somos”*/
+
+        /* var a = prompt('Ingrese el  numero','')
+
+         function EsPalindromo(a){
+           let palbra= a.split('').reverse().join('');
+            if (palbra ==a){
+            return console.log("el texto es palindromo");
+        
+
+        }else{
+            return console.log("el texto no es palindromo");}
+
+
+         }
+
+         console.log(EsPalindromo(a));*/
+
+    </script>
+
+    <script>
+        /*Dado una cadena de caracteres ingresada por el usuario, se pide realizar un script que
+            lo muestre en mayúsculas y luego en minúsculas. Investigue el manejo de string en
+            Javascript*/
+
+           /* var a = prompt('Ingrese el  texto','')
+
+            console.log(a.toUpperCase())
+            console.log(a.toLowerCase())
+            
+            
+*/
+
+
+    </script>
+
+    <script>
+        /* 9)Se pide que un usuario ingrese una nota numérica de un alumno. Muestra la
+            calificación resultante según la nota ingresada:*/
+            
+            /*var a = prompt('Ingrese el  texto','');
+            a= parseInt(a);
+                if (a <=3) {
+                    console.log("Muy deficiente");
+                    } else if (a <=5) {
+                        console.log("Insuficiente");
+                    } else if (a <=6) {
+                        console.log("Suficientee")
+                    } else if(a<=7){
+                    console.log("Bien");
+                    }
+                    else if(a<=9){
+                        console.log("notbale");
+                    }
+                    else if(a=10){
+                        console.log("Sobresaliente");
+                    }
+                    
+              */
+
+    </script>
+    <script>/* 10). Se pide realizar un script en el que el usuario introduce el número del mes (1 al 12) y
+        devuelve si ese mes tiene 30 o 31 días*/
+
+       /* var mes = prompt("Ingrese un mes");
+        mes=parseInt(mes);   
+           if (mes==1 || mes==3 || mes==5 || mes==7 || mes==8 || mes ==10 || mes==12){
+            console.log('Este mes tiene 31 dias.'); }   
+             else if(mes==2){
+                conosle.log('Este mes puede tener 30 dias.');}
+             else {  
+             console.log('Este mes tiene 30 dias.');      
+            }*/
+    </script>
+
+
+
+
+    <script>
+        /*11. Crear un script que genere una pirámide como el ejemplo con los números del 1 al
+            número que ingrese el usuario (no puede ser mayor de 10, realizar la validación):*/
+
+           /* var torre = prompt("Ingrese un numero menor a 11");
+            var contene = [];
+                if(torre < 11){
+                    for(var i=1; i <= torre; i++){
+                        for(var j=0; j<i; j++){
+                            contene[j]= 1+j;
+                        }
+                        console.log(contene.toString());
+                    }
+                }*/
+    </script>
+
+    <script>
+        /* 12) Generar una función donde ingresen dos números, el primero corresponde a la
+            cantidad de bultos en stock y el segundo a la cantidad de bultos que se pueden
+            colocar en una caja. Calcule cuántas cajas completas se pueden llenar con los bultos
+            disponibles y cuantos bultos sueltos quedarían. Mostrar ambos resultados en consola*/
+            /*
+                var a = prompt('Ingrese el  numero de bultos','')
+                var b = prompt('Ingrese el  numero debultos por caja','')
+                a=parseInt(a);
+                b=parseInt(b);
+
+               function Calculo(a,b){
+
+                if (typeof a!="number" || typeof b !="number"){
+                    return null
+                }
+
+                return "la cantidad de cajas son: " + a/b + " y sobran: " + a%b +"  bulto" 
+
+               } 
+
+           console.log( Calculo(a,b))
+                */
+
+    </script>
+    
+</body>
+</html>
